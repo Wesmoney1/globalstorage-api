@@ -1,6 +1,10 @@
 {
+  "compilerOptions": {
+    "lib": ["deno.window", "deno.unstable"]
+  },
+  "unstable": ["kv"],
   "tasks": {
-    "build": "echo 'No build step required'",
-    "start": "deno run --allow-net main.js"
+    "start": "deno run --unstable-kv --allow-net main.js",
+    "build": "echo 'No build step required'"
   }
 }
