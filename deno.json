@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "build": "echo 'No build step required'",
+    "start": "deno run --allow-net main.js"
+  }
+}
