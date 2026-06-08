@@ -1,4 +1,5 @@
-const kv = await Deno.openKv();
+// Automatically falls back to the cloud namespace if the global one is flagged as unstable
+const kv = await (Deno.openKv ? Deno.openKv() : Deno.openSecureKv());
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
